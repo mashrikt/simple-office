@@ -1,0 +1,15 @@
+{% extends "admin/base.html" %}
+
+{% block title %}Cramstack Admin{% endblock %}
+
+{% block branding %}
+<a href="{% url 'admin:index' %}">
+    <div>
+        <img src="/static/admin/img/cramstack_logo.png" height="50" style="float: left;  filter: grayscale(100%);">
+    </div>
+</a>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
+
+{% block bodyclass %}flat-theme{% endblock %}
