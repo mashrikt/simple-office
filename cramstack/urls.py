@@ -19,6 +19,7 @@ from django.conf.urls import include, url
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^auth/', include('rest_auth.urls')),
-    url(r'^api/organizations/', include('organization.urls', namespace='organization')),
+    url(r'^api/organization/', include('organization.urls', namespace='organization')),
+    url(r'^docs/', include('rest_framework_docs.urls')),
 ]
 

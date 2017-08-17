@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'rest_framework_jwt',
     'core',
     'organization',
+    'rest_framework_docs',
 ]
 
 MIDDLEWARE = [
