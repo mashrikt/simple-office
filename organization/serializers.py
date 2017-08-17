@@ -14,4 +14,4 @@ class OrganizationLinkSerializer(ModelSerializer):
 
     class Meta:
         model = OrganizationLink
-        exclude = ('created_at', 'organization')
+        exclude = ('created_at', 'created_by', 'organization')

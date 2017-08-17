@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'rest_framework_jwt',
     'core',
     'organization',
-    'rest_framework_docs',
+    'rest_framework_swagger',
 ]
 
 MIDDLEWARE = [
@@ -155,4 +155,6 @@ REST_AUTH_SERIALIZERS = {
 
 REST_USE_JWT = True
 
-
+JWT_AUTH = {
+    'JWT_ALLOW_REFRESH': True,
+}

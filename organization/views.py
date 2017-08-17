@@ -27,7 +27,7 @@ class OrganizationLinkList(ListCreateAPIView):
         return queryset
 
     def perform_create(self, serializer):
-        serializer.save(organization=self.request.user.organization)
+        serializer.save(organization=self.request.user.organization, created_by=self.request.user)
 
 
 class OrganizationLinkRetrieve(RetrieveDestroyAPIView):
@@ -38,6 +38,3 @@ class OrganizationLinkRetrieve(RetrieveDestroyAPIView):
         organization_id = self.request.user.organization.id
         queryset = OrganizationLink.objects.filter(organization_id=organization_id)
         return queryset
-
-    def perform_create(self, serializer):
-        serializer.save(created_by=self.request.user)
