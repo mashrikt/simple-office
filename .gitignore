@@ -16,12 +16,7 @@ tests/coverage_html/
 tests/.coverage
 build/
 tests/report/
-python-getting-started/settings.py
 static/
-ssl/*
-docker-compose.production.yml
-docker-compose.development.yml
-
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
