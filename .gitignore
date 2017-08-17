@@ -110,7 +110,6 @@ ENV/
 
 
 venv
-staticfiles
 db.sqlite3
 
 /Pipfile
