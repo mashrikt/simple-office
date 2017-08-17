@@ -43,8 +43,8 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'rest_auth',
     'rest_framework_jwt',
-    # 'core',
-    # 'organization',
+    'core',
+    'organization',
     'rest_framework_swagger',
 ]
 
