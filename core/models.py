@@ -15,16 +15,18 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     a full-length email field as the username.
 
     Email and password are required. Other fields are optional.
+
+    A more descriptive tutorial can be found here
+    http://www.caktusgroup.com/blog/2013/08/07/migrating-custom-user-model-django/
     """
     email = models.EmailField(_('email address'), max_length=254, unique=True)
     first_name = models.CharField(_('first name'), max_length=30, blank=True)
     last_name = models.CharField(_('last name'), max_length=30, blank=True)
     is_staff = models.BooleanField(_('staff status'), default=False,
-                                   help_text=_('Designates whether the user can log into this admin '
-                    'site.'))
+                                   help_text=_('Designates whether the user can log into this admin site.'))
     is_active = models.BooleanField(_('active'), default=True,
-                                    help_text=_('Designates whether this user should be treated as '
-                    'active. Unselect this instead of deleting accounts.'))
+                                    help_text=_('Designates whether this user should be treated as active. '
+                                                'Unselect this instead of deleting accounts.'))
     date_joined = models.DateTimeField(_('date joined'), default=timezone.now)
     organization = models.ForeignKey(Organization, null=True, blank=True)
 
