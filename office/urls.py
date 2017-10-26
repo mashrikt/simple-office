@@ -1,4 +1,4 @@
-"""cramstack URL Configuration
+"""office URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.11/topics/http/urls/
@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf.urls import include, url
+from graphene_django.views import GraphQLView
 from rest_framework_swagger.views import get_swagger_view
+
+from schema import schema
 
 schema_view = get_swagger_view(title='Pastebin API')
 
@@ -25,5 +28,6 @@ urlpatterns = [
     url(r'^api/auth/', include('core.urls', namespace='core')),
     url(r'^api/organization/', include('organization.urls', namespace='organization')),
     url(r'^docs/', schema_view),
+    url(r'^graphql/', GraphQLView.as_view(graphiql=True, schema=schema)),
 ]
 
